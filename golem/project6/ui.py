@@ -72,9 +72,9 @@ class CheckersUI:
         heuristic = Heuristics(0.3)
         self.bot_algo = Algorithm(heuristic.doubling_aggresive) 
         
-        # Difficulty settings
-        self.bot_depth = Difficulty.MEDIUM.value # Default
-        self.game_state = "MENU" # Start in menu state
+        
+        self.bot_depth = Difficulty.MEDIUM.value
+        self.game_state = "MENU" 
 
         self.user_text = ""
         self.status_message = "Enter move (e.g. 9.13):"
@@ -90,7 +90,6 @@ class CheckersUI:
         opt2 = self.FONT_INPUT.render("2 - Medium", True, self.INFO_COLOR)
         opt3 = self.FONT_INPUT.render("3 - Hard", True, self.ERROR_COLOR)
         
-        # Center elements
         cx = self.WIDTH // 2
         self.SCREEN.blit(title_surf, (cx - title_surf.get_width() // 2, 100))
         self.SCREEN.blit(subtitle_surf, (cx - subtitle_surf.get_width() // 2, 200))
@@ -116,6 +115,16 @@ class CheckersUI:
 
     def draw_pieces(self) -> None:
         radius = self.SQUARE_SIZE // 2 - 10
+        attacking_indices = set()
+        
+        if self.game.position_forced_by_attack != -1:
+            attacking_indices.add(self.game.position_forced_by_attack)
+        else:
+            _, attacking_moves = self.game.possible_moves()
+            
+            for move in attacking_moves:
+                attacking_indices.add(move[0])
+
         for i, piece_val in enumerate(self.game.board):
             if piece_val == 0:
                 continue
@@ -125,15 +134,13 @@ class CheckersUI:
             y = row * self.SQUARE_SIZE + self.SQUARE_SIZE // 2
 
             color = self.WHITE_PIECE if piece_val > 0 else self.BLACK_PIECE
-
             pygame.draw.circle(self.SCREEN, color, (x, y), radius)
-            
             if abs(piece_val) == K_VALUE:
                 pygame.draw.circle(self.SCREEN, self.GOLD, (x, y), radius, 5)
             
-            if self.game.position_forced_by_attack == i:
+            if i in attacking_indices:
                 pygame.draw.circle(self.SCREEN, self.ERROR_COLOR, (x, y), radius + 2, 2)
-
+                
     def draw_ui_panel(self) -> None:
         panel_rect = (0, self.BOARD_HEIGHT, self.WIDTH, self.HEIGHT - self.BOARD_HEIGHT)
         pygame.draw.rect(self.SCREEN, self.UI_BG, panel_rect)
@@ -243,7 +250,6 @@ class CheckersUI:
         running = True
         while running:
             
-            # --- MENU STATE ---
             if self.game_state == "MENU":
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
@@ -265,7 +271,6 @@ class CheckersUI:
                 self.CLOCK.tick(30)
                 continue
 
-            # --- GAME STATE ---
             if self.game.color == self.BOT_COLOR:
                 pygame.time.delay(500)
                 self.process_bot_move()
