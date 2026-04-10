@@ -1,0 +1,9 @@
+Obliczanie wymiaru jądra macierzy (X - λI) dla λ = -1:
+--------------------------------------------------
+Macierz A: wymiar jądra = 1  (rząd = 4)
+Macierz B: wymiar jądra = 2  (rząd = 3)
+Macierz C: wymiar jądra = 2  (rząd = 3)
+Macierz D: wymiar jądra = 3  (rząd = 2)
+Macierz E: wymiar jądra = 3  (rząd = 2)
+Macierz F: wymiar jądra = 4  (rząd = 1)
+Macierz G: wymiar jądra = 5  (rząd = 0)

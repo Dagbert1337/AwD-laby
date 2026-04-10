@@ -1,0 +1,54 @@
+========================= MACIERZ M =========================
+
+--- Wartość własna λ = 5 (krotność alg.: 3) ---
+Ciąg wymiarów jąder d_k: [2, 3]
+Struktura klatek dla λ = 5:
+   -> 1 klatka/i o rozmiarze 1x1
+   -> 1 klatka/i o rozmiarze 2x2
+
+--- Wartość własna λ = 2 (krotność alg.: 3) ---
+Ciąg wymiarów jąder d_k: [1, 2, 3]
+Struktura klatek dla λ = 2:
+   -> 1 klatka/i o rozmiarze 3x3
+
+--- Weryfikacja końcowa dla macierzy M (postać Jordana) ---
+⎡2  1  0  0  0  0⎤
+⎢                ⎥
+⎢0  2  1  0  0  0⎥
+⎢                ⎥
+⎢0  0  2  0  0  0⎥
+⎢                ⎥
+⎢0  0  0  5  1  0⎥
+⎢                ⎥
+⎢0  0  0  0  5  0⎥
+⎢                ⎥
+⎣0  0  0  0  0  5⎦
+
+
+========================= MACIERZ N =========================
+
+--- Wartość własna λ = 2 (krotność alg.: 2) ---
+Ciąg wymiarów jąder d_k: [1, 2]
+Struktura klatek dla λ = 2:
+   -> 1 klatka/i o rozmiarze 2x2
+
+--- Wartość własna λ = 5 (krotność alg.: 4) ---
+Ciąg wymiarów jąder d_k: [3, 4]
+Struktura klatek dla λ = 5:
+   -> 2 klatka/i o rozmiarze 1x1
+   -> 1 klatka/i o rozmiarze 2x2
+
+--- Weryfikacja końcowa dla macierzy N (postać Jordana) ---
+⎡2  1  0  0  0  0⎤
+⎢                ⎥
+⎢0  2  0  0  0  0⎥
+⎢                ⎥
+⎢0  0  5  1  0  0⎥
+⎢                ⎥
+⎢0  0  0  5  0  0⎥
+⎢                ⎥
+⎢0  0  0  0  5  0⎥
+⎢                ⎥
+⎣0  0  0  0  0  5⎦
+
+

@@ -1,0 +1,18 @@
+
+========================== UZASADNIENIE ==========================
+Dla macierzy X o wielu wartosciach wlasnych zachodzi:
+dim ker(X - λ * I) = dim ker(J - λ * I).
+
+1. Klatki dla innych wartosci wlasnych (μ ≠ λ):
+   Macierz (J_μ(μ) - λ * I) ma na przekatnej (μ - λ) ≠ 0. 
+   Jest to macierz odwracalna, wiec wymiar jej jadra wynosi 0.
+
+2. Klatki dla wartosci wlasnej λ:
+   Macierz (J_λ(λ) - λ * I) sprowadza sie do klatki J_λ(0).
+   Wymiar jadra kazdej takiej pojedynczej klatki to zawsze 1.
+
+WNIOSEK: Wymiar dim ker(X - λ * I) sumuje jadra wszystkich klatek. 
+Poniewaz klatki innych wartosci wlasnych daja 0, wynik odpowiada 
+dokladnie liczbie klatek Jordana dla wybranej wartosci λ.
+==================================================================
+

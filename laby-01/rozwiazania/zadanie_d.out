@@ -1,0 +1,16 @@
+
+============================== HIPOTEZA ==============================
+
+dla macierzy X nad ciałem ℂ, ktora posiada tylko jedna wartosc wlasna,
+całkowita liczba klatek Jordana w jej postaci blokowej jest
+dokladnie rowna wymiarowi jadra przekształcenia (X - λ * I).
+
+================================ WZOR ================================
+
+                    k = dim( ker(X - λ * I) )
+gdzie:
+k to liczba klatek Jordana macierzy X
+I to macierz jednostkowa odpowiedniego wymiaru
+
+======================================================================
+

@@ -1,0 +1,28 @@
+Ciągi wymiarów jąder potęg macierzy (X - λI):
+(stabilizacja następuje po osiągnięciu wymiaru 5)
+
+Macierz A: [1, 2, 3, 4, 5]
+Macierz B: [2, 3, 4, 5]
+Macierz C: [2, 4, 5]
+Macierz D: [3, 4, 5]
+Macierz E: [3, 5]
+Macierz F: [4, 5]
+Macierz G: [5]
+
+========== ZALEZNOSC WIELKOSCI KLATEK OD WZROSTU JADER ==========
+
+Niech d_k oznacza wymiar jadra k-tej potegi:
+d_k = dim ker( (X - λ * I)**k ), gdzie przyjmujemy d_0 = 0.
+
+Zaleznosci wielkosci klatek Jordana prezentuja sie nastepujaco:
+1. Pierwsza roznica: (d_k - d_1)
+   Mowi nam, ile jest klatek Jordana o rozmiarze CO NAJMNIEJ k.
+
+2. Druga roznica (dokladna liczba klatek):
+   Aby znalezc liczbe klatek o rozmiarze DOKLADNIE k, odejmujemy 
+   od siebie dwa kolejne przyrosty:
+   liczba_klatek(k) = (d_k - d_1) - (d_3 - d_k)
+   liczba_klatek(k) = 2 * d_k - d_1 - d_3
+   
+=================================================================
+

@@ -1,0 +1,50 @@
+
+======================================= HIPOTEZA =======================================
+
+Liczba klatek Jordana macierzy X o wartosci wlasnej λ wynosi: dim(ker(X - λ * I)).
+
+========================================= DOWOD =========================================
+1. Lemat:
+   Jesli macierze sa podobne (B = P^-1 * A * P), to ich przesuniecia o skalar 
+   rowniez: B - λ * I = P^-1 * A * P - P^-1 * (λ * I) * P = P^-1 * (A - λ * I) * P.
+   Wniosek: dim( ker(X - λ * I) ) = dim( ker(J - λ * I) ), gdzie J to postac Jordana.
+   
+2. Dowód właściwy:
+   Macierz J - λ * I sklada sie z klatek Jk(0) na przekatnej.
+   Kazda klatka Jk(0) ma postac macierzy z zerami na przekatnej i jedynkami 
+   tuz nad nia. Wymiar jadra kazdej takiej pojedynczej klatki to zawsze 1.
+   
+   Suma wymiarow jader wszystkich blokow (czyli dim( ker(J - λ * I) )) musi wiec 
+   odpowiadac dokladnie liczbie klatek w macierzy Jordana.
+========================================================================================
+
+Weryfikacja Lematu i Hipotezy dla macierzy A-G:
+
+-------------- Macierz A --------------
+Lemat (Podobieństwo): ZALICZONE
+Hipoteza (Klatki=1, Jądro=1): ZALICZONE
+----------------------------------------
+-------------- Macierz B --------------
+Lemat (Podobieństwo): ZALICZONE
+Hipoteza (Klatki=2, Jądro=2): ZALICZONE
+----------------------------------------
+-------------- Macierz C --------------
+Lemat (Podobieństwo): ZALICZONE
+Hipoteza (Klatki=2, Jądro=2): ZALICZONE
+----------------------------------------
+-------------- Macierz D --------------
+Lemat (Podobieństwo): ZALICZONE
+Hipoteza (Klatki=3, Jądro=3): ZALICZONE
+----------------------------------------
+-------------- Macierz E --------------
+Lemat (Podobieństwo): ZALICZONE
+Hipoteza (Klatki=3, Jądro=3): ZALICZONE
+----------------------------------------
+-------------- Macierz F --------------
+Lemat (Podobieństwo): ZALICZONE
+Hipoteza (Klatki=4, Jądro=4): ZALICZONE
+----------------------------------------
+-------------- Macierz G --------------
+Lemat (Podobieństwo): ZALICZONE
+Hipoteza (Klatki=5, Jądro=5): ZALICZONE
+----------------------------------------
