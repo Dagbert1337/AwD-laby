@@ -1,4 +1,4 @@
-from zadanie_1.matrices import Matrices
+from zadanie_2.matrices import Matrices
 import sympy as sp
 
 P, J = Matrices.H.value.jordan_form()
