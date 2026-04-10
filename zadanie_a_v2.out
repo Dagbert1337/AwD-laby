@@ -1,0 +1,12 @@
+Wielomiany charakterystyczne macierzy a-g:
+A:  (lamda + 1)**5
+B:  (lamda + 1)**5
+C:  (lamda + 1)**5
+D:  (lamda + 1)**5
+E:  (lamda + 1)**5
+F:  (lamda + 1)**5
+G:  (lamda + 1)**5
+
+Wartości własne w formacie {<wartość>: <ilość wystąpień>, ...}:
+{-1: 5}
+Czyli jedyna to liczba "-1"
